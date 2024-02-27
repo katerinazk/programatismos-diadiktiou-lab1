@@ -13,5 +13,6 @@ def more(text):
 url = 'http://python.org/'  # προσδιορισμός του url
 
 with requests.get(url) as response:  # το αντικείμενο response
-    html = response.text
-    more(html)
+    #html = response.text
+    #more(html)
+    print(f"website headers are {url} \n, {response.headers} \n\n")

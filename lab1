@@ -16,3 +16,8 @@ with requests.get(url) as response:  # το αντικείμενο response
     #html = response.text
     #more(html)
     print(f"website headers are {url} \n, {response.headers} \n\n")
+
+    server= response.headers.get("Server")
+
+    if server: print(f"server found {server}")
+    else: print("No server found")
